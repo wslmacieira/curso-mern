@@ -1,0 +1,36 @@
+Arguments: 
+  /home/wslmacieira/.nvm/versions/node/v14.15.1/bin/node /usr/share/yarn/bin/yarn.js init
+
+PATH: 
+  /home/wslmacieira/.zinit/polaris/sbin:/home/wslmacieira/.zinit/polaris/bin:/home/wslmacieira/.nvm/versions/node/v14.15.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/dotnet/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Java/jdk1.8.0_211/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/php:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Oracle/instantclient_19_6:/mnt/c/Users/wslmacieira/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/wslmacieira/AppData/Local/Programs/Python/Python39/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/wslmacieira/scoop/shims:/mnt/c/Users/wslmacieira/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/wslmacieira/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/wslmacieira/.dotnet/tools:/mnt/c/Users/wslmacieira/.dotnet/tools:/mnt/c/Gradle/gradle-6.8.2/bin:/mnt/c/Program Files/Java/jdk-11.0.8/bin:/mnt/c/Maven/apache-maven-3.6.3/bin:/mnt/d/Programas/dive_0.9.2_windows:/mnt/c/Users/wslmacieira/AppData/Roaming/npm:/opt/oracle/instantclient_21_1
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/share/yarn/lib/cli.js:137009:13)
+      at Interface.emit (events.js:315:20)
+      at Interface._ttyWrite (readline.js:875:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:315:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1144:36)
+      at ReadStream.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
