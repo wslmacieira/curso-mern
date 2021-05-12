@@ -5,6 +5,7 @@ const routes = express.Router();
 
 routes.get('/api/usuarios', Usuario.index);
 routes.post('/api/usuarios', Usuario.create);
+routes.put('/api/usuarios', Usuario.update);
 routes.get('/api/usuarios/:_id', Usuario.details);
 routes.delete('/api/usuarios/:_id', Usuario.delete);
 
