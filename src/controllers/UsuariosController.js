@@ -1,9 +1,11 @@
 const Usuario = require('../models/Usuario');
 
 module.exports = {
-  index(req, res) {
-    res.json({ message: 'GET' })
+  async index(req, res) {
+    const users = await Usuario.find();
+    return res.json(users);
   },
+
   async create(req, res) {
     const { nome_usuario, email_usuario, tipo_usuario, senha_usuario } = req.body;
 
@@ -17,5 +19,11 @@ module.exports = {
     } else {
       return res.status(400).json({ message: 'Usuario já cadastrado!' })
     }
+  },
+
+  async details(req, res) {
+    const { _id } = req.params;
+    const user = await Usuario.findOne({ _id });
+    return res.json(user);
   },
 }
