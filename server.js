@@ -3,11 +3,12 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
+const routes = require('./src/routes');
 
 const app = express();
 const port = process.env.PORT || 3333;
 
-mongoose.connect('mongodb+srv://admin:root@cluster0.vwjp1.mongodb.net/curso-basico-mearn', {
+mongoose.connect('mongodb+srv://admin:root@cluster0.vwjp1.mongodb.net/curso-basico-mern', {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useFindAndModify: false
@@ -23,9 +24,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello World' })
-});
+app.use(routes);
 
 app.listen(3333, () => {
   console.log(`🚀 Server runing on port ${port}`)
