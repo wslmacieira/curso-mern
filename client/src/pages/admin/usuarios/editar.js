@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
 import { Container, Grid, Paper, Box, TextField, FormControl, InputLabel, Select, MenuItem, Button} from '@material-ui/core';
 
 import MenuAdmin from '../../../components/menu-admin';
@@ -15,20 +17,36 @@ export default function Dashboard() {
   const [senha, setSenha] = useState('');
   const [tipo, setTipo] = useState('');
 
+  const { usuarioId } = useParams();
+
+  useEffect(() => {
+    async function getUsuario(){
+      const response = await api.get(`/api/usuarios/${usuarioId}`);
+      const { nome_usuario, email_usuario, senha_usuario, tipo_usuario} = response.data;
+      console.log(response.data)
+      setNome(nome_usuario);
+      setEmail(email_usuario);
+      setSenha(senha_usuario);
+      setTipo(tipo_usuario);
+    }
+    getUsuario();
+  }, []);
+
   async function handleSubmit() {
     const data = {
+      _id: usuarioId,
       nome_usuario: nome,
       email_usuario: email,
       senha_usuario: senha,
       tipo_usuario: tipo
     }
     console.log('data ->', data)
-    const response = await api.post('/api/usuarios', data)
+    const response = await api.put('/api/usuarios', data)
 
-    if(response.status === 201) {
+    if(response.status === 200) {
       window.location.href='/admin/usuarios';
     } else {
-      alert('Erro ao cadastrar usúario');
+      alert('Erro ao atualizar usúario');
     }
   }
 
@@ -42,7 +60,7 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item sm={12}>
               <Paper className={classes.paper}>
-                <h2>Cadastro de Usúario</h2>
+                <h2>Atualização de Usúario</h2>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={12}>
                   <TextField

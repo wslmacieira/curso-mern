@@ -9,6 +9,7 @@ import Produtos from './pages/admin/produtos';
 
 import Usuarios from './pages/admin/usuarios';
 import UsuarioCadastrar from './pages/admin/usuarios/cadastrar';
+import UsuarioEditar from './pages/admin/usuarios/editar';
 
 // Client Imports
 import Home from './pages/client/home';
@@ -29,6 +30,7 @@ export default function Routes() {
 
         <Route path="/admin/usuarios" exact component={Usuarios} />
         <Route path="/admin/usuarios/cadastrar" exact component={UsuarioCadastrar} />
+        <Route path="/admin/usuarios/editar/:usuarioId" exact component={UsuarioEditar} />
       </Switch>
     </BrowserRouter>
   )

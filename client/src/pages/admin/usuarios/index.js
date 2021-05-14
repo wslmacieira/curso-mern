@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {Container, Paper, Grid, Box, Button, ButtonGroup, } from '@material-ui/core';
 
 import Table from '@material-ui/core/Table';
@@ -89,7 +90,11 @@ export default function Dashboard() {
                 )}</TableCell>
               <TableCell align="left">
                 <ButtonGroup color="primary" aria-label="outlined primary button group">
-                  <Button color="primary">Atualizar</Button>
+                  <Button color="primary">
+                    <Link to={"/admin/usuarios/editar/"+ usuario._id}>
+                    Atualizar
+                    </Link>
+                  </Button>
                   <Button color="secondary" onClick={() => handleDelete(usuario._id)}>Excluir</Button>
                 </ButtonGroup>
               </TableCell>
