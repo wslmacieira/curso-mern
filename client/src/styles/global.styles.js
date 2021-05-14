@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 650,
   },
+  formControl: {
+    width: '100%'
+  }
 }));
 
 export { useStyles }

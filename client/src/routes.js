@@ -8,6 +8,7 @@ import Dashboard from './pages/admin/dashboard'
 import Produtos from './pages/admin/produtos';
 
 import Usuarios from './pages/admin/usuarios';
+import UsuarioCadastrar from './pages/admin/usuarios/cadastrar';
 
 // Client Imports
 import Home from './pages/client/home';
@@ -27,6 +28,7 @@ export default function Routes() {
         <Route path="/admin/produtos" exact component={Produtos} />
 
         <Route path="/admin/usuarios" exact component={Usuarios} />
+        <Route path="/admin/usuarios/cadastrar" exact component={UsuarioCadastrar} />
       </Switch>
     </BrowserRouter>
   )
