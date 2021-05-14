@@ -10,6 +10,7 @@ import Produtos from './pages/admin/produtos';
 import Usuarios from './pages/admin/usuarios';
 import UsuarioCadastrar from './pages/admin/usuarios/cadastrar';
 import UsuarioEditar from './pages/admin/usuarios/editar';
+import Login from './pages/admin/login';
 
 // Client Imports
 import Home from './pages/client/home';
@@ -25,6 +26,7 @@ export default function Routes() {
 
         {/* Routes Admin */}
         <Route path="/admin" exact component={Dashboard} />
+        <Route path="/admin/login" exact component={Login} />
 
         <Route path="/admin/produtos" exact component={Produtos} />
 
