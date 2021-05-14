@@ -30,7 +30,7 @@ export default function Dashboard() {
       setTipo(tipo_usuario);
     }
     getUsuario();
-  }, []);
+  }, [usuarioId]);
 
   async function handleSubmit() {
     const data = {
